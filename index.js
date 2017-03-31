@@ -6,7 +6,7 @@ const operator = {
     divideContent (content) {
         let match;
         let lastIndex;
-        const reg = new RegExp(requireReg, 'g');
+        const reg = new RegExp(requireReg);
         while (match = reg.exec(content)) {
             lastIndex = reg.lastIndex;
         }
@@ -22,7 +22,7 @@ const operator = {
     },
 
     getModulePath (modulePart) {
-        const reg = new RegExp(requireReg, 'g');
+        const reg = new RegExp(requireReg);
         const modulePaths = [];
         let match;
         while (match = reg.exec(modulePart)) {
