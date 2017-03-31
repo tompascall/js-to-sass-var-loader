@@ -10,7 +10,7 @@ This loader is for that special case when you would like to import data from a j
 
 #### Prerequisites
 
-- Nodejs >= 6.0
+- Nodejs >= 4.0
 - [sass](http://sass-lang.com/) for css pre-processing
 - Webpack for module bundle
 
