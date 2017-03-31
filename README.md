@@ -13,7 +13,7 @@ This loader is for that special case when you would like to import data from a j
 - Nodejs >= 6.0
 - [sass](http://sass-lang.com/) for css pre-processing
 - Webpack for module bundle
-- Install js-to-sass-var-loader npm package into your project: `npm i --save js-to-sass-var-loader`
+
 
 #### Setting up Webpack config
 
@@ -75,6 +75,6 @@ You can use other require form (`require('relative/path/to/module').someProperty
 
 #### Development
 
-Run tests with `npm test` or `npm run test:watch`. 
+Run tests with `npm test` or `npm run test:watch`.  
 
 The transformer is developed with tdd, so if you would like to contribute, please, write your tests for your new functionality, and send pull request to integrate your changes.
