@@ -41,7 +41,7 @@ const operator = {
         }, {});
     },
 
-    transformToLessVars (varData) {
+    transformToSassVars (varData) {
         const keys = Object.keys(varData);
         return keys.reduce( (result, key) => {
             result += `$${key}: ${varData[key]};\n`;
@@ -50,12 +50,12 @@ const operator = {
     },
 
     mergeVarsToContent (content, webpackContext) {
-        const [ moduleData, lessContent ] = this.divideContent(content);
+        const [ moduleData, sassContent ] = this.divideContent(content);
         if (moduleData) {
             const modulePath = this.getModulePath(moduleData);
             const varData = this.getVarData(modulePath, webpackContext);
-            const lessVars = this.transformToLessVars(varData);
-            return lessVars + lessContent;
+            const sassVars = this.transformToSassVars(varData);
+            return sassVars + sassContent;
         }
         else return content;
     }

@@ -2,7 +2,7 @@ import path from 'path';
 const loader = require('../index').default;
 const { operator } = require('../index');
 
-describe('js-to-less-vars-loader', () => {
+describe('js-to-sass-vars-loader', () => {
 
     describe('module', () => {
         const context = {
@@ -85,10 +85,10 @@ describe('js-to-less-vars-loader', () => {
         });
     });
 
-    describe('transformToLessVars', () => {
-        it('takes a hash object and transforms it to less variables', () => {
+    describe('transformToSassVars', () => {
+        it('takes a hash object and transforms it to sass variables', () => {
             const colors = require('../mocks/colors.js');
-            expect(operator.transformToLessVars(colors)).toEqual('$white: #fff;\n$black: #000;\n');
+            expect(operator.transformToSassVars(colors)).toEqual('$white: #fff;\n$black: #000;\n');
         });
     });
 
@@ -97,15 +97,15 @@ describe('js-to-less-vars-loader', () => {
             context: path.resolve()
         };
 
-        it('inserst vars to less content', () => {
+        it('inserst vars to sass content', () => {
             const content = "require('./mocks/colors.js');\n" +
                 ".someClass { color: #fff;}";
-            const [ moduleData, lessContent ] = operator.divideContent(content);
+            const [ moduleData, sassContent ] = operator.divideContent(content);
             const modulePath = operator.getModulePath(moduleData);
             const varData = operator.getVarData(modulePath, context);
-            const lessVars = operator.transformToLessVars(varData);
+            const sassVars = operator.transformToSassVars(varData);
 
-            expect(operator.mergeVarsToContent(content, context)).toEqual(lessVars + lessContent);
+            expect(operator.mergeVarsToContent(content, context)).toEqual(sassVars + sassContent);
         });
 
         it('gives back content as is if there is no requre', () => {
