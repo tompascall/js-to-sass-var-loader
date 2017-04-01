@@ -73,6 +73,16 @@ require('relative/path/to/colors.js');
 
 You can use other require form (`require('relative/path/to/module').someProperty`), too.  
 
+#### Demo
+
+You can try the loader via a small fake app in the `demo` folder:  
+```sh
+cd demo
+npm i
+npm run demo
+```
+The webpack dev server serves the app on `localhost:8030`. In the app we share data between js and sass modules.
+
 #### Development
 
 Run tests with `npm test` or `npm run test:watch`.  
