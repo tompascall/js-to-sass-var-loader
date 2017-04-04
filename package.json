@@ -1,6 +1,6 @@
 {
   "name": "js-to-sass-var-loader",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Webpack loader for sharing data amongst sass and javascript modules",
   "main": "index.js",
   "scripts": {
