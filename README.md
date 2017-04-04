@@ -1,6 +1,6 @@
 ![Build Status](https://travis-ci.org/tompascall/js-to-sass-var-loader.svg?branch=master) [![Coverage Status](https://coveralls.io/repos/github/tompascall/js-to-sass-var-loader/badge.svg?branch=master)](https://coveralls.io/github/tompascall/js-to-sass-var-loader?branch=master)
 
-### This project is *not maintained* any more. please try the [js-to-styles-var-loader](https://github.com/tompascall/js-to-styles-var-loader), which is a more flexible loader, it handles Less, too. 
+### This project is *not maintained* any more. Please try the [js-to-styles-var-loader](https://github.com/tompascall/js-to-styles-var-loader), which is a more flexible loader, it handles Less, too. 
 
 ## js-to-sass-var-loader
 
